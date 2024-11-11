@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta link="../css/Conctact.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+              <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="Contact.html">Conctact</a></li>
+                <li><a href="Diffusion.html">Diffusion</a></li>
+                <li><a href="Photo.html">Photo</a></li>
+                <li><a href="RestaurantBar.html">Restaurant & Bar</a></li>
+                <li><a href="Réservation.html">Réservation</a></li>
+              </ul>
+            </nav>
+          </header>
+          <main>
+                <form class="formLetter" method="post" action="#">
+                    <fieldset>
+                        <lengend>Informations sur vous</lengend>
 
+                        <label for="nom">Nom :</label>
+                        <input type="text" name="nom" id="nom" placeholder="Votre nom">
+                        <br><br>
+
+                        <label for="prenom">Prénom :</label>
+                        <input type="text" name="prenom" id="prenom" placeholder="Votre prénom">
+                        <br><br>
+
+                        <label for="courriel">Courriel :</label>
+                        <input type="email" name="courriel" id="courriel" placeholder="Votre courriel">
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Votre demande</legend>
+
+                        <label for="objet">Objet de la demande :</label>
+                        <select id="objet" name="objet">
+                            <option value="0">- Séléctionner -</option>
+                            <option value="cons">Conseils</option>
+                            <option value="recl">Reclamations</option>
+                            <option value="anni">Anniversaires</option>
+                            <option value="post">Postuler</option>
+                        </select>
+                        <br><br>
+
+                        <label for="description">Message :</label> <br>
+                        <textarea rows="10" cols="50" name="description" id="description"></textarea>
+                        <br><br>
+
+                        <input type="submit" name="Envoyer" id="soumission">
+                        <input type="reset">
+                    </fieldset>
+
+                </form>
+          </main>
+    </body>
+</html>
