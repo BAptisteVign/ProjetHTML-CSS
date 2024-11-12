@@ -1,5 +1,38 @@
-formu fieldset{
+.formu fieldset{
     width: 60%;
     margin: auto;
     padding: 30px;
+    border-radius: 2.5%;
+}
+
+.formu fieldset:hover{
+    box-shadow: 2px 2px 5px;
+}
+
+.formu legend{
+    font-style: bold;
+    text-shadow: 1px 1px;
+}
+
+.formu label{
+    font-style: bold;
+    display: inline-block;
+    width: 25%;
+}
+
+.formu input{
+    border: none;
+    border-bottom: 1px solid;
+    width: 25%;
+}
+
+.formu input:focus{
+    border-bottom: 2px solid;
+    background-color: whitesmoke;
+}
+
+.formu select{
+    border: none;
+    border-bottom: 1px solid;
+    width: 25%;
 }
