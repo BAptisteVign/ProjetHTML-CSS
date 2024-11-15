@@ -41,14 +41,14 @@ nav ul {
     text-shadow: 0 0 5px rgb(0, 132, 255); /* Effet lumineux de base */
   }
   
-  /* Animation pour le dégradé vibrant */
+
   @keyframes NavColor {
     from {
-      color: rgb(0, 132, 255); /* Début bleu électrique */
+      color: rgb(0, 132, 255); 
       text-shadow: 0 0 10px rgb(0, 132, 255), 0 0 20px rgb(0, 132, 255);
     }
     to {
-      color: rgb(255, 0, 204); /* Fin rose fuchsia */
+      color: rgb(255, 0, 204); 
       text-shadow: 0 0 10px rgb(255, 0, 204), 0 0 20px rgb(255, 0, 204);
     }
   }
@@ -59,8 +59,8 @@ nav ul {
   }
   
   nav img {
-    height: 100px; /* Ajustez la taille de l'image */
-    vertical-align: middle; /* Alignement vertical */
+    height: 100px; 
+    vertical-align: middle; 
   }
 
 
