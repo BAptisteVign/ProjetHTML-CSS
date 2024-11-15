@@ -1,4 +1,14 @@
 /*------------------------*/
+/*--------COULEUR--------*/
+/*------------------------*/
+
+:root {
+    --bleu-electrique: rgb(0, 132, 255); /* Couleur bleu électrique */
+    --rose-fuchsia: rgb(255, 0, 204);  /* Couleur rose fuchsia */
+    
+  }
+  
+/*------------------------*/
 /*----------BODY----------*/
 /*------------------------*/
 
@@ -36,26 +46,26 @@ nav ul {
     text-decoration: none; 
     font-size: 20px; 
     font-weight: bold;
-    color: rgb(0, 132, 255); /* Couleur de base */
-    animation: NavColor 4s infinite alternate; /* Animation sans virgules */
-    text-shadow: 0 0 5px rgb(0, 132, 255); /* Effet lumineux de base */
+    color: var(--bleu-electrique); 
+    animation: NavColor 4s infinite alternate; 
+    text-shadow: 0 0 5px var(--bleu-electrique); 
   }
   
 
   @keyframes NavColor {
     from {
-      color: rgb(0, 132, 255); 
-      text-shadow: 0 0 10px rgb(0, 132, 255), 0 0 20px rgb(0, 132, 255);
+      color: var(--bleu-electrique); 
+      text-shadow: 0 0 10px var(--bleu-electrique), 0 0 20px var(--bleu-electrique);
     }
     to {
-      color: rgb(255, 0, 204); 
-      text-shadow: 0 0 10px rgb(255, 0, 204), 0 0 20px rgb(255, 0, 204);
+      color: var(--rose-fuchsia); 
+      text-shadow: 0 0 10px var(--rose-fuchsia), 0 0 20px var(--rose-fuchsia);
     }
   }
   
   nav a:hover {
-  transform: scale(1.1); 
-  text-decoration: overline; 
+  
+  text-decoration: underline; 
   }
   
   nav img {
@@ -63,20 +73,26 @@ nav ul {
     vertical-align: middle; 
   }
 
-
-
 /*------------------------*/
-/*--------En cours--------*/
+/*---main/cadre dyn vert---*/
 /*------------------------*/
+main {
+    margin: 50px 50px; 
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 2px solid rgba(255, 255, 255, 0.2); 
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+    text-align: center;
+  }
+  
 
-.cadre {
-    justify-content: center; /* Centrage horizontal */
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    padding: 60px;
-    border-radius: 60px; 
-}
+
+
+
+  /*------------------------*/
+/*--en cours---*/
+/*------------------------*/
 
 .calendrier {
     display: grid;
@@ -89,4 +105,30 @@ nav ul {
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+
+
+/*------------------------*/
+/*--------Footer--------*/
+/*------------------------*/
+
+footer dl {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center; 
+  }
+  
+  footer dt {
+    font-weight: bold; 
+    text-transform: uppercase; 
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: #0e9aff; 
+  }
+  
+  footer dd {
+    margin: 0 0 10px;
+    font-size: 0.9em;
+    color: #ccc; 
   }
