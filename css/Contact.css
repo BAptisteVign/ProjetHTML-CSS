@@ -1,3 +1,64 @@
+:root {
+    --bleu-electrique: rgb(0, 132, 255); /* Couleur bleu électrique */
+    --rose-fuchsia: rgb(255, 0, 204);  /* Couleur rose fuchsia */
+    
+  }
+
+*{
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+header {
+    background-color: #333; 
+    padding: 10px 0;
+  }
+  
+nav ul {
+    display: flex; /* Mise en ligne des éléments */
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; /* Centrage vertical */
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 0 15px; /* Espacement entre les items */
+  }
+
+  nav a {
+    text-decoration: none; 
+    font-size: 20px; 
+    font-weight: bold;
+    color: var(--bleu-electrique); 
+    animation: NavColor 4s infinite alternate; 
+    text-shadow: 0 0 5px var(--bleu-electrique); 
+  }
+  
+
+  @keyframes NavColor {
+    from {
+      color: var(--bleu-electrique); 
+      text-shadow: 0 0 10px var(--bleu-electrique), 0 0 20px var(--bleu-electrique);
+    }
+    to {
+      color: var(--rose-fuchsia); 
+      text-shadow: 0 0 10px var(--rose-fuchsia), 0 0 20px var(--rose-fuchsia);
+    }
+  }
+  
+  nav a:hover {
+    text-decoration: underline; 
+  }
+  
+  nav img {
+    height: 100px; 
+    vertical-align: middle; 
+  }
+
+
+
 .formu fieldset{
     width: 60%;
     margin: auto;
@@ -12,6 +73,7 @@
 .formu legend{
     font-style: bold;
     text-shadow: 1px 1px;
+
 }
 
 .formu label{
@@ -36,3 +98,24 @@
     border-bottom: 1px solid;
     width: 25%;
 }
+
+
+footer dl {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center; 
+  }
+  
+  footer dt {
+    font-weight: bold; 
+    text-transform: uppercase; 
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: #0e9aff; 
+  }
+  
+  footer dd {
+    margin: 0 0 10px;
+    font-size: 0.9em;
+    color: #ccc; 
+  }
