@@ -18,7 +18,7 @@ body {
     background: linear-gradient(25deg, rgb(20, 20, 20), rgba(73, 69, 69, 0.886));
     color: white; /* Texte blanc par défaut */
     font-family: 'Orbitron', sans-serif;
-  }
+  } 
 
 /*------------------------*/
 /*---barre de navigation---*/
@@ -115,7 +115,7 @@ main {
 
   /*------------------------*/
 /*--en cours---*/
-/*------------------------*/
+/*------------------------*/      
 
 .calendrier {
     display: grid;
