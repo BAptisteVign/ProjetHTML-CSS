@@ -70,11 +70,41 @@ nav img {
 }
 
 
+#titre{
+  text-align: center;
+}
+
+h1{
+  color: #0e9aff;
+}
+
+/* Animation dynamique */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 
+                0 0 40px rgba(0, 255, 0, 0.3), 
+                0 0 60px rgba(0, 255, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.7), 
+                0 0 50px rgba(0, 255, 0, 0.5), 
+                0 0 70px rgba(0, 255, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 
+                0 0 40px rgba(0, 255, 0, 0.3), 
+                0 0 60px rgba(0, 255, 0, 0.1);
+  }
+}
 .formu fieldset{
     width: 60%;
     margin: auto;
     padding: 30px;
     border-radius: 2.5%;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5),
+    0 0 40px rgba(0, 255, 0, 0.3), 
+    0 0 60px rgba(0, 255, 0, 0.1);
+    animation: glow 2s infinite;
 }
 
 .formu fieldset:hover{
@@ -83,7 +113,7 @@ nav img {
 
 .formu legend{
     font-style: bold;
-    text-shadow: 1px 1px;
+    color: #0e9aff;
 
 }
 
@@ -91,13 +121,21 @@ nav img {
     font-style: bold;
     display: inline-block;
     width: 25%;
+    color: #0e9aff;
 }
 
 .formu input{
     border: none;
     border-bottom: 1px solid;
     width: 25%;
+    background-color: gray;
 }
+
+::placeholder{
+  color: whitesmoke;
+}
+
+
 
 .formu input:focus{
     border-bottom: 2px solid;
@@ -108,28 +146,28 @@ nav img {
     border: none;
     border-bottom: 1px solid;
     width: 25%;
+    background-color: gray;
+}
+.formu select:focus{
+  background-color: whitesmoke;
 }
 
 
-footer dl {
-    margin: 0 auto;
-    padding: 0;
-    text-align: center; 
-  }
-  
-  footer dt {
-    font-weight: bold; 
-    text-transform: uppercase; 
-    margin-top: 15px;
-    font-size: 1.1em;
-    color: #0e9aff; 
-  }
-  
-  footer dd {
-    margin: 0 0 10px;
-    font-size: 0.9em;
-    color: #ccc; 
-  }
+
+.formu textarea{
+  background-color: gray;
+  resize: none;
+  cursor: text;
+}
+#bouton input{
+  color: whitesmoke;
+}
+.formu textarea:focus{
+  background-color: white;
+}
+
+
+
 
   
 /*------------------------*/
@@ -154,4 +192,17 @@ footer dd {
   margin: 0 0 10px;
   font-size: 0.9em;
   color: #ccc; 
+}
+
+footer ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.site img{
+  width: 30px;
+  height: 30px;
 }
