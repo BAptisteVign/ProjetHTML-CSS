@@ -151,25 +151,6 @@ nav img {
 
 
 
-footer dl {
-    margin: 0 auto;
-    padding: 0;
-    text-align: center; 
-  }
-  
-  footer dt {
-    font-weight: bold; 
-    text-transform: uppercase; 
-    margin-top: 15px;
-    font-size: 1.1em;
-    color: #0e9aff; 
-  }
-  
-  footer dd {
-    margin: 0 0 10px;
-    font-size: 0.9em;
-    color: #ccc; 
-  }
 
   
 /*------------------------*/
@@ -194,4 +175,17 @@ footer dd {
   margin: 0 0 10px;
   font-size: 0.9em;
   color: #ccc; 
+}
+
+footer ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.site img{
+  width: 30px;
+  height: 30px;
 }
