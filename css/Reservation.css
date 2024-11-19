@@ -110,9 +110,119 @@ main {
 }
 
 
+/*------------------------*/
+/*--Nombre de couverts---*/
+/*------------------------*/
+
+.button {
+  list-style: none; 
+  display: flex;
+  gap: 10px; 
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  justify-content:center ;
+} 
+
+.button li {
+  padding: 10px 20px;
+  background-color: #333; 
+  color: white; 
+  border-radius: 25px; 
+  text-align: center; 
+  cursor: pointer; 
+}
+
+.button li:hover {
+  animation: BoxColor 4s infinite alternate; 
+  
+}
+
+@keyframes BoxColor { 
+  from {
+    background-color: var(--bleu-electrique); 
+    box-shadow: 0 0 10px var(--bleu-electrique), 0 0 20px var(--bleu-electrique); 
+  }
+  to {
+    background-color: var(--rose-fuchsia); 
+    box-shadow: 0 0 10px var(--rose-fuchsia), 0 0 20px var(--rose-fuchsia); 
+  }
+}
+
+/*------------------------*/
+/*--------Heure---------*/
+/*------------------------*/
+.heure {
+  text-align: center;
+}
+.heure dl {    
+  border-style: solid;
+  padding: 10px;
+  width:  300px;
+  margin: auto;
+  height: 100px;
+  overflow: scroll;
+  scrollbar-width: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #333;
+  color: white;
+}
 
 
+.heure dt {
+  font-weight: bold;
+  margin-top: 10px;
+  color: white;
+}
 
+.heure dd {
+  margin-left: 0; 
+  margin-right: 0px;
+  margin-bottom: 5px;
+  color: white;
+  padding: 5px 20px;
+  border: 1px solid;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.heure dd:hover{
+  animation: heureColor 4s  ;
+} 
+@keyframes heureColor { 
+  from {
+    background-color: var(--bleu-electrique); 
+    box-shadow: 0 0 10px var(--bleu-electrique), 0 0 20px var(--bleu-electrique); 
+  }
+  to {
+    background-color: var(--rose-fuchsia); 
+    box-shadow: 0 0 10px var(--rose-fuchsia), 0 0 20px var(--rose-fuchsia); 
+  }
+}
+dl {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+
+
+/*------------------------*/
+/*--Bouton reservation---*/
+/*------------------------*/
+
+.Reservation{
+  border-radius: 10px;
+  width: 200px;
+}
+/* Supprime la marge du dernier bouton pour éviter un espace inutile */
+.button-container button:last-child {
+  margin-right: 0;
+}
   /*------------------------*/
 /*--en cours---*/
 /*------------------------*/      
@@ -135,7 +245,9 @@ main {
 /*------------------------*/
 /*--------Footer--------*/
 /*------------------------*/
-
+footer {
+  animation: none ;
+}
 footer dl {
     margin: 0 auto;
     padding: 0;
