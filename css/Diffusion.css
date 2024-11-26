@@ -29,28 +29,33 @@ header {
   top: 0;
   width: 100%;
   z-index: 10;
-  display: flex; /* Utilisation de flex */
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px; /* Hauteur totale de la barre */
+  height: auto; /* S'adapte à la hauteur nécessaire */
+  box-sizing: border-box; /* Empêche les débordements liés au padding */
 }
 
 nav ul {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Centre les éléments horizontalement */
   align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+  width: 100%; /* S'adapte à la largeur de l'écran */
+  box-sizing: border-box; /* Inclut padding et marges dans la largeur */
 }
 
 nav li {
-  margin: 0 15px;
+  margin: 0 15px; /* Espacement uniforme entre les items */
+  white-space: nowrap; /* Empêche le texte de se diviser */
 }
 
 nav a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px; /* Taille ajustée pour éviter les débordements */
   font-weight: bold;
   color: var(--bleu-electrique);
   animation: NavColor 4s infinite alternate;
@@ -58,7 +63,7 @@ nav a {
 }
 
 nav img {
-  height: 60px;
+  height: 50px; /* Taille réduite du logo pour éviter les débordements */
   vertical-align: middle;
 }
 
@@ -111,21 +116,20 @@ nav a:hover {
 .main-title {
   position: relative;
   text-align: center;
-  font-size: 3.5em; /* Taille légèrement réduite pour un aspect épuré */
-  font-family: 'Poppins', sans-serif; /* Une police moderne et élégante */
-  font-weight: 700; /* Rendre le texte plus "bold" */
-  color: var(--rose-fuchsia); /* Couleur rose pour un effet vif et attractif */
+  font-size: 3.5em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: var(--rose-fuchsia);
   text-shadow: 
-    0 2px 4px rgba(0, 0, 0, 0.6), /* Ombre portée pour la profondeur */
-    0 0 10px var(--rose-fuchsia), /* Lueur subtile autour du texte */
-    0 0 20px rgba(255, 255, 255, 0.5); /* Douce lueur blanche */
-  letter-spacing: 2px; /* Espacement léger pour plus de lisibilité */
-  text-transform: uppercase; /* Tout en majuscules pour un effet impactant */
+    0 2px 4px rgba(0, 0, 0, 0.6),
+    0 0 10px var(--rose-fuchsia),
+    0 0 20px rgba(255, 255, 255, 0.5);
+  letter-spacing: 2px;
+  text-transform: uppercase;
   margin-bottom: 50px;
   animation: titleFadeIn 2s ease-in-out;
 }
 
-/* Animation personnalisée pour le titre */
 @keyframes titleFadeIn {
   from {
     opacity: 0;
@@ -177,7 +181,7 @@ nav a:hover {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
   color: var(--rose-fuchsia);
-  font-size: 0.9em; /* Texte légèrement réduit */
+  font-size: 0.9em;
   text-align: center;
 }
 
@@ -234,7 +238,31 @@ footer dd {
 
 @media (max-width: 768px) {
   .main-title {
-    font-size: 3em;
+    font-size: 2.5em;
+    padding: 0 10px;
+  }
+
+  header {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 5px 0;
+  }
+
+  nav img {
+    height: 40px;
+  }
+
+  .hero {
+    padding-top: 100px;
+    height: auto;
   }
 
   .content-boxes {
@@ -243,6 +271,46 @@ footer dd {
   }
 
   .box {
-    padding: 10px;
+    padding: 15px;
+  }
+
+  .box img {
+    max-height: 150px;
+  }
+
+  .box p {
+    font-size: 0.85em;
+  }
+
+  footer {
+    padding: 15px;
+    font-size: 0.85em;
+  }
+
+  footer dl {
+    padding: 0 10px;
+  }
+
+  #social img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 2em;
+  }
+
+  nav ul {
+    padding-left: 10px;
+  }
+
+  .content-boxes {
+    grid-gap: 10px;
+  }
+
+  .box img {
+    max-height: 120px;
   }
 }
