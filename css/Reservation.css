@@ -18,6 +18,8 @@ body {
     background: linear-gradient(25deg, rgb(20, 20, 20), rgba(73, 69, 69, 0.886));
     color: white; /* Texte blanc par défaut */
     font-family: 'Orbitron', sans-serif;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
   } 
 
 /*------------------------*/
@@ -74,10 +76,20 @@ nav ul {
 
 /*------------------------*/
 /*---main/cadre dyn vert---*/
+/*---Et positionnement---*/
 /*------------------------*/
-main {
-    margin: 50px 50px; 
-    padding: 20px;
+
+.main-container {
+  display: grid; 
+  grid-template-columns: 3fr 3fr 3fr; 
+  grid-template-rows: auto 2fr auto;
+  gap: 20px; 
+  align-items: flex-start;
+  margin-top: 20px;
+  align-items: center; 
+  justify-items: center; 
+  margin: 50px 50px; 
+  padding: 20px;
     background-color: rgba(255, 255, 255, 0.1); 
     border: 2px solid rgba(255, 255, 255, 0.2); 
     border-radius: 20px;
@@ -90,7 +102,6 @@ main {
     animation: glow 2s infinite;
 }
 
-/* Animation dynamique */
 @keyframes glow {
   0% {
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 
@@ -109,6 +120,38 @@ main {
   }
 }
 
+
+.section {
+  grid-column: 2; 
+  grid-row: 1; 
+}
+
+.image-gauche {
+  grid-column: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-gauche img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  
+}
+
+.image-droite {
+  grid-column: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-droite img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
 
 /*------------------------*/
 /*--Nombre de couverts---*/
@@ -147,6 +190,94 @@ main {
     background-color: var(--rose-fuchsia); 
     box-shadow: 0 0 10px var(--rose-fuchsia), 0 0 20px var(--rose-fuchsia); 
   }
+}
+
+
+/*------------------------*/
+/*------Calendrier--------*/
+/*------------------------*/ 
+.box {
+  width: 400px;
+  background: #333;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+  display: inline-block;
+}
+
+.box h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.calendrier h1 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.nav-calendrier {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.nav-calendrier div {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.nav-calendrier div:hover {
+  animation: BoxColor 4s infinite alternate;
+}
+
+@keyframes BoxColor {
+  from {
+      background-color: var(--bleu-electrique);
+      box-shadow: 0 0 10px var(--bleu-electrique), 0 0 20px var(--bleu-electrique);
+  }
+  to {
+      background-color: var(--rose-fuchsia);
+      box-shadow: 0 0 10px var(--rose-fuchsia), 0 0 20px var(--rose-fuchsia);
+  }
+}
+
+.jours {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  
+  
+}
+
+.jours div {
+  padding: 10px;
+  background: #333;;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.jours div.titre {
+  font-weight: bold;
+  background: #ddd;
+  color: #555;
+}
+
+.jours div.actuel {
+  background: var(--bleu-electrique);
+  color: white;
 }
 
 /*------------------------*/
@@ -223,24 +354,6 @@ dl {
 .button-container button:last-child {
   margin-right: 0;
 }
-  /*------------------------*/
-/*--en cours---*/
-/*------------------------*/      
-
-.calendrier {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 7 colonnes pour les jours de la semaine */
-    gap: 5px;
-    width: 90%;
-    max-width: 600px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-
 
 /*------------------------*/
 /*--------Footer--------*/
