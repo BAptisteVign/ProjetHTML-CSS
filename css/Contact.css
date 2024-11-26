@@ -144,7 +144,7 @@ h1{
 
 .formu input:focus{
     border-bottom: 2px solid;
-    background-color: whitesmoke;
+    background-color: rgba(192, 223, 239);
     color: black;
     cursor: pointer;
 }
@@ -156,7 +156,7 @@ h1{
     background-color: gray;
 }
 .formu select:focus{
-  background-color: whitesmoke;
+  background-color: rgba(192, 223, 239);
 }
 
 
@@ -174,7 +174,7 @@ h1{
 }
 */
 .formu textarea:focus{
-  background-color: white;
+  background-color: rgba(192, 223, 239);
 }
 
 #bouton {
