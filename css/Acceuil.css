@@ -72,6 +72,11 @@ nav ul {
     vertical-align: middle; 
   }
 
+  section img{
+      height: 25%;
+      width: 25%;
+  }
+
 
   
 /*------------------------*/
