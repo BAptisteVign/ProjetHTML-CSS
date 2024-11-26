@@ -345,38 +345,72 @@ dl {
 /*------------------------*/
 /*--Bouton reservation---*/
 /*------------------------*/
-
-.Reservation{
+.Reservation {
   border-radius: 10px;
+  border-color: white;
   width: 200px;
-}
-/* Supprime la marge du dernier bouton pour éviter un espace inutile */
-.button-container button:last-child {
-  margin-right: 0;
+  height: 50px; 
+  background-color: #333; 
+  color: white;  
+  font-size: 16px; 
+  margin-top: 50px;
+  justify-content: center; 
+  align-items: center; 
+  cursor: pointer; 
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
+.Reservation:hover {
+  animation: reservation 4s ease infinite; /* Animation avec un mouvement fluide et répété */
+}
+
+@keyframes reservation {
+  0% {
+    background-color: var(--bleu-electrique); 
+    box-shadow: 0 0 10px var(--bleu-electrique), 0 0 20px var(--bleu-electrique);
+  }
+  50% {
+    background-color: var(--rose-fuchsia);
+    box-shadow: 0 0 10px var(--rose-fuchsia), 0 0 20px var(--rose-fuchsia);
+  }
+  100% {
+    background-color: var(--bleu-electrique); 
+    box-shadow: 0 0 10px var(--bleu-electrique), 0 0 20px var(--bleu-electrique);
+  }
+}
 /*------------------------*/
 /*--------Footer--------*/
 /*------------------------*/
-footer {
-  animation: none ;
-}
+
 footer dl {
-    margin: 0 auto;
-    padding: 0;
-    text-align: center; 
-  }
-  
-  footer dt {
-    font-weight: bold; 
-    text-transform: uppercase; 
-    margin-top: 15px;
-    font-size: 1.1em;
-    color: #0e9aff; 
-  }
-  
-  footer dd {
-    margin: 0 0 10px;
-    font-size: 0.9em;
-    color: #ccc; 
-  }
+  margin: 0 auto;
+  padding: 0;
+  text-align: center; 
+}
+
+footer dt {
+  font-weight: bold; 
+  text-transform: uppercase; 
+  margin-top: 15px;
+  font-size: 1.1em;
+  color: #0e9aff; 
+}
+
+footer dd {
+  margin: 0 0 10px;
+  font-size: 0.9em;
+  color: #ccc; 
+}
+
+footer ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.site img{
+  width: 30px;
+  height: 30px;
+}
