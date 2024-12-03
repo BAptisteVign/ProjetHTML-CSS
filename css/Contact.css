@@ -1,3 +1,7 @@
+
+
+
+
 :root {
     --bleu-electrique: rgb(0, 132, 255); /* Couleur bleu électrique */
     --rose-fuchsia: rgb(255, 0, 204);  /* Couleur rose fuchsia */
@@ -133,13 +137,16 @@ h1{
 
 ::placeholder{
   color: whitesmoke;
+  opacity: 1;
 }
 
 
 
 .formu input:focus{
     border-bottom: 2px solid;
-    background-color: whitesmoke;
+    background-color: rgba(192, 223, 239);
+    color: black;
+    cursor: pointer;
 }
 
 .formu select{
@@ -149,7 +156,7 @@ h1{
     background-color: gray;
 }
 .formu select:focus{
-  background-color: whitesmoke;
+  background-color: rgba(192, 223, 239);
 }
 
 
@@ -157,16 +164,81 @@ h1{
 .formu textarea{
   background-color: gray;
   resize: none;
-  cursor: text;
+  cursor: pointer;
+  height: auto;
+  width: 100%;
 }
+/*
 #bouton input{
   color: whitesmoke;
 }
+*/
 .formu textarea:focus{
-  background-color: white;
+  background-color: rgba(192, 223, 239);
 }
 
+#bouton {
+  list-style: none; 
+  display: flex;
+  gap: 15px; 
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  justify-content: center;
+  color: whitesmoke;
+} 
 
+input {
+  padding: 10px 20px;
+  background-color: #333; 
+  color: white; 
+  border-radius: 25px; 
+  text-align: center; 
+}
+
+#bouton input:hover {
+  animation: BoxColor 0.5s alternate; 
+  cursor: pointer;
+}
+
+/* Styles spécifiques pour les petits écrans (téléphones) */ 
+@media (max-width: 600px) { 
+  form { 
+    padding: 10px;
+  } 
+  input{
+    font-size: 14px;
+    padding: 8px;
+  }
+  textarea { 
+  font-size: 14px;
+  padding: 8px; 
+  border-radius: 3px; 
+  } 
+  label { 
+    font-size: 14px; 
+  }
+
+}
+
+/* Styles spécifiques pour les écrans de taille moyenne (tablettes) */ 
+@media (min-width: 601px) and (max-width: 1024px) { 
+  form { 
+    padding: 20px; 
+  } 
+  input { 
+    font-size: 16px; 
+    padding: 12px; 
+    border-radius: 5px; 
+  } 
+  label { 
+    font-size: 16px; 
+  } 
+  button { 
+    font-size: 16px; 
+    padding: 12px 20px;
+  }
+}
 
 
   

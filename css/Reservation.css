@@ -13,13 +13,34 @@
 /*------------------------*/
 
 body {
-    margin: 0;
-    height: auto; 
-    background: linear-gradient(25deg, rgb(20, 20, 20), rgba(73, 69, 69, 0.886));
+    margin: 0; 
+    background: linear-gradient(25deg,   rgb(20, 20, 20), rgba(73, 69, 69, 0.886));
     color: white; /* Texte blanc par défaut */
     font-family: 'Orbitron', sans-serif;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
   } 
 
+  h2 {
+    color: var(--rose-fuchsia); 
+    text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.6), 
+    0 0 10px var(--rose-fuchsia), 
+    0 0 20px rgba(255, 255, 255, 0.5);
+    animation: titleFadeIn 1s ease-in-out;
+    font-weight: 1000;
+}
+
+@keyframes titleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /*------------------------*/
 /*---barre de navigation---*/
 /*------------------------*/
@@ -74,14 +95,24 @@ nav ul {
 
 /*------------------------*/
 /*---main/cadre dyn vert---*/
+/*---Et positionnement---*/
 /*------------------------*/
-main {
-    margin: 50px 50px; 
-    padding: 20px;
+
+.main-container {
+  display: grid; 
+  grid-template-columns: 3fr 3fr 3fr; 
+  grid-template-rows: auto 2fr auto;
+  gap: 20px; 
+  align-items: flex-start;
+  margin-top: 20px;
+  align-items: center; 
+  justify-items: center; 
+  margin: 50px 50px; 
+  padding: 20px;
     background-color: rgba(255, 255, 255, 0.1); 
     border: 2px solid rgba(255, 255, 255, 0.2); 
     border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+    
     text-align: center;
   
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.5),
@@ -90,7 +121,6 @@ main {
     animation: glow 2s infinite;
 }
 
-/* Animation dynamique */
 @keyframes glow {
   0% {
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 
@@ -110,48 +140,363 @@ main {
 }
 
 
+.section {
+  grid-column: 2; 
+  grid-row: 1; 
+}
 
+.image-gauche {
+  grid-column: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.image-gauche img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  
+}
 
-  /*------------------------*/
-/*--en cours---*/
-/*------------------------*/      
+.image-droite {
+  grid-column: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.calendrier {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 7 colonnes pour les jours de la semaine */
-    gap: 5px;
-    width: 90%;
-    max-width: 600px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.image-droite img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+/*------------------------*/
+/*--Nombre de couverts---*/
+/*------------------------*/
+
+.button {
+  list-style: none; 
+  display: flex;
+  gap: 10px; 
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  justify-content:center ;
+} 
+
+.button li {
+  padding: 10px 20px;
+  background-color: #333; 
+  color: white; 
+  border-radius: 25px; 
+  text-align: center; 
+  cursor: pointer; 
+}
+
+.button li:hover {
+  animation: BoxColor 4s infinite alternate; 
+  
+}
+
+@keyframes BoxColor { 
+  from {
+    background-color: var(--bleu-electrique); 
+    box-shadow: 0 0 10px var(--bleu-electrique), 0 0 20px var(--bleu-electrique); 
   }
+  to {
+    background-color: var(--rose-fuchsia); 
+    box-shadow: 0 0 10px var(--rose-fuchsia), 0 0 20px var(--rose-fuchsia); 
+  }
+}
 
 
+/*------------------------*/
+/*------Calendrier--------*/
+/*------------------------*/ 
+.box {
+  width: 400px;
+  background: #333;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+  display: inline-block;
+}
 
+.box h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.calendrier h1 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.nav-calendrier {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.nav-calendrier div {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.nav-calendrier div:hover {
+  animation: BoxColor 4s infinite alternate;
+}
+
+@keyframes BoxColor {
+  from {
+      background-color: var(--bleu-electrique);
+      box-shadow: 0 0 10px var(--bleu-electrique), 0 0 20px var(--bleu-electrique);
+  }
+  to {
+      background-color: var(--rose-fuchsia);
+      box-shadow: 0 0 10px var(--rose-fuchsia), 0 0 20px var(--rose-fuchsia);
+  }
+}
+
+.jours {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  
+  
+}
+
+.jours div {
+  padding: 10px;
+  background: #333;;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.jours div.titre {
+  font-weight: bold;
+  background: #ddd;
+  color: #555;
+}
+
+.jours div.actuel {
+  background: var(--bleu-electrique);
+  color: white;
+}
+
+/*------------------------*/
+/*--------Heure---------*/
+/*------------------------*/
+.heure {
+  text-align: center;
+}
+.heure dl {    
+  border-style: solid;
+  padding: 10px;
+  width:  300px;
+  margin: auto;
+  height: 100px;
+  overflow: scroll;
+  scrollbar-width: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #333;
+  color: white;
+}
+
+
+.heure dt {
+  font-weight: bold;
+  margin-top: 10px;
+  color: white;
+}
+
+.heure dd {
+  margin-left: 0; 
+  margin-right: 0px;
+  margin-bottom: 5px;
+  color: white;
+  padding: 5px 20px;
+  border: 1px solid;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.heure dd:hover{
+  animation: heureColor 4s  ;
+} 
+@keyframes heureColor { 
+  from {
+    background-color: var(--bleu-electrique); 
+    box-shadow: 0 0 10px var(--bleu-electrique), 0 0 20px var(--bleu-electrique); 
+  }
+  to {
+    background-color: var(--rose-fuchsia); 
+    box-shadow: 0 0 10px var(--rose-fuchsia), 0 0 20px var(--rose-fuchsia); 
+  }
+}
+dl {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+
+
+/*------------------------*/
+/*--Bouton reservation---*/
+/*------------------------*/
+.Reservation {
+  border-radius: 10px;
+  border-color: white;
+  width: 200px;
+  height: 50px; 
+  background-color: #333; 
+  color: white;  
+  font-size: 16px; 
+  margin-top: 50px;
+  justify-content: center; 
+  align-items: center; 
+  cursor: pointer; 
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.Reservation:hover {
+  animation: reservation 4s ease infinite; /* Animation avec un mouvement fluide et répété */
+}
+
+@keyframes reservation {
+  0% {
+    background-color: var(--bleu-electrique); 
+    box-shadow: 0 0 10px var(--bleu-electrique), 0 0 20px var(--bleu-electrique);
+  }
+  50% {
+    background-color: var(--rose-fuchsia);
+    box-shadow: 0 0 10px var(--rose-fuchsia), 0 0 20px var(--rose-fuchsia);
+  }
+  100% {
+    background-color: var(--bleu-electrique); 
+    box-shadow: 0 0 10px var(--bleu-electrique), 0 0 20px var(--bleu-electrique);
+  }
+}
 /*------------------------*/
 /*--------Footer--------*/
 /*------------------------*/
 
 footer dl {
-    margin: 0 auto;
-    padding: 0;
-    text-align: center; 
+  margin: 0 auto;
+  padding: 0;
+  text-align: center; 
+}
+
+footer dt {
+  font-weight: bold; 
+  text-transform: uppercase; 
+  margin-top: 15px;
+  font-size: 1.1em;
+  color: #0e9aff; 
+}
+
+footer dd {
+  margin: 0 0 10px;
+  font-size: 0.9em;
+  color: #ccc; 
+}
+
+footer ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.site img{
+  width: 30px;
+  height: 30px;
+}
+
+/*------------------------*/
+/*--------Responsive--------*/
+/*------------------------*/
+
+@media (max-width: 768px) {
+  .main-container {
+    grid-template-columns: 1fr;
+    margin: 10px;
+    padding: 10px;
   }
-  
-  footer dt {
-    font-weight: bold; 
-    text-transform: uppercase; 
-    margin-top: 15px;
-    font-size: 1.1em;
-    color: #0e9aff; 
+  nav img {
+    display: none;
   }
-  
-  footer dd {
-    margin: 0 0 10px;
-    font-size: 0.9em;
-    color: #ccc; 
+  nav ul {
+    flex-direction: column;
   }
+
+  .button {
+    flex-direction: column;
+  }
+
+  .image-gauche, .image-droite {
+    display: none;
+  }
+
+  .box {
+    width: 90%;
+  }
+
+  .Reservation {
+    width: 90%;
+  }
+
+  footer ul {
+    flex-direction: column;
+  }
+
+  .heure dl {
+    width: 90%;
+  }
+}
+
+/* Small devices */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 18px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  .main-container {
+    margin: 5px;
+    padding: 10px;
+  }
+
+  .button li {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .box {
+    width: 100%;
+  }
+}
