@@ -49,7 +49,8 @@ header {
     background-color: #333; 
     padding: 10px 0;
   }
-  
+
+
 nav ul {
     display: flex; /* Mise en ligne des éléments */
     justify-content: center; /* Centrage horizontal */
@@ -120,6 +121,8 @@ nav ul {
               0 0 60px rgba(0, 255, 0, 0.1);
     animation: glow 2s infinite;
 }
+
+
 
 @keyframes glow {
   0% {
@@ -460,7 +463,7 @@ footer ul{
   }
 
   .box {
-    width: 90%;
+    display: none;
   }
 
   .Reservation {
