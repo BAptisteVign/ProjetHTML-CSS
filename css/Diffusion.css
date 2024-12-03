@@ -19,7 +19,7 @@ body {
 }
 
 /*------------------------*/
-/*--- Barre de navigation */
+/*------- NAV BAR ------- */
 /*------------------------*/
 nav {
   display: flex;
@@ -70,13 +70,13 @@ nav ul {
 }
 
 nav li {
-  margin: 0 15px; /* Espacement uniforme entre les items */
-  white-space: nowrap; /* Empêche le texte de se diviser */
+  margin: 0 15px; 
+  white-space: nowrap; 
 }
 
 nav a {
   text-decoration: none;
-  font-size: 18px; /* Taille ajustée pour éviter les débordements */
+  font-size: 18px; 
   font-weight: bold;
   color: var(--bleu-electrique);
   animation: NavColor 4s infinite alternate;
@@ -84,7 +84,7 @@ nav a {
 }
 
 nav img {
-  height: 50px; /* Taille réduite du logo pour éviter les débordements */
+  height: 50px; 
   vertical-align: middle;
 }
 
