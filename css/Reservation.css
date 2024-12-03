@@ -229,6 +229,10 @@ nav ul {
   display: inline-block;
 }
 
+.calendrier-image {
+  display: none;
+}
+
 .box h1 {
   font-size: 20px;
   margin-bottom: 20px;
@@ -462,9 +466,6 @@ footer ul{
     display: none;
   }
 
-  .box {
-    display: none;
-  }
 
   .Reservation {
     width: 90%;
@@ -477,6 +478,7 @@ footer ul{
   .heure dl {
     width: 90%;
   }
+  
 }
 
 /* Small devices */
@@ -500,6 +502,25 @@ footer ul{
   }
 
   .box {
-    width: 100%;
+    display: none; 
+  }
+  .calendrier-image {
+    display: block; 
+    width: 10%;  
+    margin: 0 auto; 
+  }
+
+  .calendrier{
+    display: none;
+  }
+
+  .box {
+    display: none; /* Masque le calendrier */
+  }
+
+  .calendrier-image {
+    display: block; /* Affiche l'image */
+    width: 90%; /* Ajuste la largeur */
+    margin: 0 auto; /* Centre l'image */
   }
 }
