@@ -49,7 +49,8 @@ header {
     background-color: #333; 
     padding: 10px 0;
   }
-  
+
+
 nav ul {
     display: flex; /* Mise en ligne des éléments */
     justify-content: center; /* Centrage horizontal */
@@ -120,6 +121,8 @@ nav ul {
               0 0 60px rgba(0, 255, 0, 0.1);
     animation: glow 2s infinite;
 }
+
+
 
 @keyframes glow {
   0% {
@@ -224,6 +227,10 @@ nav ul {
   text-align: center;
   justify-content: center;
   display: inline-block;
+}
+
+.calendrier-image {
+  display: none;
 }
 
 .box h1 {
@@ -459,9 +466,6 @@ footer ul{
     display: none;
   }
 
-  .box {
-    width: 90%;
-  }
 
   .Reservation {
     width: 90%;
@@ -474,6 +478,7 @@ footer ul{
   .heure dl {
     width: 90%;
   }
+  
 }
 
 /* Small devices */
@@ -497,6 +502,25 @@ footer ul{
   }
 
   .box {
-    width: 100%;
+    display: none; 
+  }
+  .calendrier-image {
+    display: block; 
+    width: 10%;  
+    margin: 0 auto; 
+  }
+
+  .calendrier{
+    display: none;
+  }
+
+  .box {
+    display: none; /* Masque le calendrier */
+  }
+
+  .calendrier-image {
+    display: block; /* Affiche l'image */
+    width: 90%; /* Ajuste la largeur */
+    margin: 0 auto; /* Centre l'image */
   }
 }
