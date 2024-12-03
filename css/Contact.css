@@ -1,22 +1,8 @@
 
-
-
-
 :root {
     --bleu-electrique: rgb(0, 132, 255); /* Couleur bleu électrique */
     --rose-fuchsia: rgb(255, 0, 204);  /* Couleur rose fuchsia */
     
-  }
-/*------------------------*/
-/*----------BODY----------*/
-/*------------------------*/
-
-body {
-    margin: 0;
-    height: auto; 
-    background: linear-gradient(25deg, rgb(20, 20, 20), rgba(73, 69, 69, 0.886));
-    color: white; /* Texte blanc par défaut */
-    font-family: 'Orbitron', sans-serif;
   }
 
 /*------------------------*/
@@ -73,6 +59,18 @@ nav img {
   vertical-align: middle; 
 }
 
+/*------------------------*/
+/*----------BODY----------*/
+/*------------------------*/
+
+body {
+  margin: 0;
+  height: auto; 
+  background: linear-gradient(25deg, rgb(20, 20, 20), rgba(73, 69, 69, 0.886));
+  color: white; /* Texte blanc par défaut */
+  font-family: 'Orbitron', sans-serif;
+}
+
 
 #titre{
   text-align: center;
@@ -100,6 +98,11 @@ h1{
                 0 0 60px rgba(0, 255, 0, 0.1);
   }
 }
+
+/*------------------------*/
+/*----FORMULAIRE----------*/
+/*------------------------*/
+
 .formu fieldset{
     width: 60%;
     margin: auto;
