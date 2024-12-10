@@ -7,33 +7,35 @@
     --rose-fuchsia: rgb(255, 0, 204);  /* Couleur rose fuchsia */
     
 }
-  
+
 /*------------------------*/
 /*----------BODY----------*/
 /*------------------------*/
 
 body {
-    margin: 0; 
-    background: linear-gradient(25deg,   rgb(20, 20, 20), rgba(73, 69, 69, 0.886));
+    margin: 0;  /* Applique une marge de 0 pour supprimer les marges par défaut du navigateur */
+    background: linear-gradient(25deg,   rgb(20, 20, 20), rgba(73, 69, 69, 0.886)); /* Ajoute un fond dégradé en diagonale (25 degrés) avec deux couleurs */
     color: white; /* Texte blanc par défaut */
     font-family: 'Orbitron', sans-serif;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
   } 
 
-  h2 {
-    color: var(--rose-fuchsia); 
-    text-shadow: 
+  
+h2 {
+  color: var(--rose-fuchsia);
+  /* Ajoute des ombres pour un effet lumineux */
+  text-shadow: 
     0 2px 4px rgba(0, 0, 0, 0.6), 
     0 0 10px var(--rose-fuchsia), 
     0 0 20px rgba(255, 255, 255, 0.5);
-    animation: titleFadeIn 1s ease-in-out;
-    font-weight: 1000;
+  animation: titleFadeIn 1s ease-in-out; /* Animation d'apparition */
+  font-weight: 1000;
 }
 
+
+/* Définition de l'animation pour le titre */
 @keyframes titleFadeIn {
   from {
-    opacity: 0;
+    opacity: 0;  /* Le texte commence invisible */
     transform: translateY(-30px);
   }
   to {
@@ -41,38 +43,40 @@ body {
     transform: translateY(0);
   }
 }
+
 /*------------------------*/
 /*---barre de navigation---*/
 /*------------------------*/
 
 header {
-    background-color: #333; 
+    background-color: #333;   /* Couleur de fond sombre pour contraster avec le texte et le reste du site*/
     padding: 10px 0;
   }
 
-
+/* Style pour la liste de navigation */
 nav ul {
     display: flex; /* Mise en ligne des éléments */
     justify-content: center; /* Centrage horizontal */
-    align-items: center; /* Centrage vertical */
-    list-style: none; 
+    align-items: center; 
+    list-style: none; /* Supprime les puces des listes */ 
     margin: 0;
     padding: 0;
   }
   
-  nav li {
-    margin: 0 15px; /* Espacement entre les items */
-  }
+/* Style pour chaque élément de la liste */
+nav li {
+  margin: 0 15px; /* Espacement entre les items */
+}
 
-  nav a {
-    text-decoration: none; 
-    font-size: 20px; 
-    font-weight: bold;
-    color: var(--bleu-electrique); 
-    animation: NavColor 4s infinite alternate; 
-    text-shadow: 0 0 5px var(--bleu-electrique); 
-  }
-  
+/* Style pour les liens dans la barre de navigation */
+nav a {
+  text-decoration: none; /* Supprime le soulignement par défaut */
+  font-size: 20px; 
+  font-weight: bold; 
+  color: var(--bleu-electrique); 
+  animation: NavColor 4s infinite alternate; /* Animation pour changer les couleurs */
+  text-shadow: 0 0 5px var(--bleu-electrique); /* Effet lumineux autour du texte */
+}
 
   @keyframes NavColor {
     from {
@@ -84,15 +88,18 @@ nav ul {
       text-shadow: 0 0 10px var(--rose-fuchsia), 0 0 20px var(--rose-fuchsia);
     }
   }
+
+/* Effet au survol des liens */
+nav a:hover {
+  text-decoration: underline; 
+
+}
   
-  nav a:hover {
-    text-decoration: underline; 
-  }
-  
-  nav img {
-    height: 100px; 
-    vertical-align: middle; 
-  }
+nav img {
+  height: 7rem; 
+  vertical-align: middle; 
+}
+
 
 /*------------------------*/
 /*---main/cadre dyn vert---*/
@@ -100,29 +107,23 @@ nav ul {
 /*------------------------*/
 
 .main-container {
-  display: grid; 
-  grid-template-columns: 3fr 3fr 3fr; 
-  grid-template-rows: auto 2fr auto;
-  gap: 20px; 
-  align-items: flex-start;
-  margin-top: 20px;
-  align-items: center; 
-  justify-items: center; 
-  margin: 50px 50px; 
-  padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1); 
-    border: 2px solid rgba(255, 255, 255, 0.2); 
-    border-radius: 20px;
-    
-    text-align: center;
-  
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5),
-              0 0 40px rgba(0, 255, 0, 0.3), 
+  display: grid; /* Organisation en grille */
+  grid-template-columns: repeat(3, 3fr); /* Trois colonnes égales */
+  grid-template-rows: auto 2fr auto; /* Hauteur des lignes */
+  gap: 20px; /* Espacement entre les éléments */
+  justify-items: center; /* Centre horizontalement */
+  margin: 50px; /* Marges uniformes */
+  padding: 20px; /* Espacement interne */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1); /* Fond transparent */
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Bordure subtile */
+  border-radius: 20px; /* Coins arrondis */
+
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5),
+              0 0 40px rgba(0, 255, 0, 0.3),
               0 0 60px rgba(0, 255, 0, 0.1);
-    animation: glow 2s infinite;
+  animation: glow 2s infinite; /* Animation pour effet lumineux */
 }
-
-
 
 @keyframes glow {
   0% {
@@ -141,7 +142,6 @@ nav ul {
                 0 0 60px rgba(0, 255, 0, 0.1);
   }
 }
-
 
 .section {
   grid-column: 2; 
@@ -175,28 +175,29 @@ nav ul {
   margin-top: 20px;
 }
 
+
 /*------------------------*/
 /*--Nombre de couverts---*/
 /*------------------------*/
-
 .button {
-  list-style: none; 
-  display: flex;
-  gap: 10px; 
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  justify-content:center ;
+  list-style: none; /* Supprime les puces des listes */
+  display: flex; /* Mise en ligne horizontale des éléments */
+  gap: 10px; /* Espacement horizontal entre les boutons */
+  padding: 0; /* Supprime les marges internes */
+  margin: 0; /* Supprime les marges externes */
+  text-align: center; 
+  justify-content: center; /* Centre les éléments horizontalement dans leur conteneur */
 } 
 
 .button li {
   padding: 10px 20px;
   background-color: #333; 
-  color: white; 
-  border-radius: 25px; 
-  text-align: center; 
-  cursor: pointer; 
+  color: white;
+  border-radius: 25px; /* Coins arrondis pour un aspect bouton */
+  text-align: center; /* Centre le texte dans le bouton */
+  cursor: pointer; /* Change le curseur  */
 }
+
 
 .button li:hover {
   animation: BoxColor 4s infinite alternate; 
@@ -218,6 +219,8 @@ nav ul {
 /*------------------------*/
 /*------Calendrier--------*/
 /*------------------------*/ 
+
+/* Style de la boîte principale contenant le calendrier */  
 .box {
   width: 400px;
   background: #333;
@@ -225,10 +228,10 @@ nav ul {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
-  justify-content: center;
   display: inline-block;
 }
 
+/* Cacher l'image liée au calendrier */
 .calendrier-image {
   display: none;
 }
@@ -279,32 +282,29 @@ nav ul {
   }
 }
 
+/* Style des jours du calendrier */
 .jours {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
-  
-  
+  display: grid; /* Mise en page en grille */
+  grid-template-columns: repeat(7, 1fr); /* Crée une grille avec 7 colonnes égales (une pour chaque jour) */
+  gap: 5px; /* Espacement entre les éléments */
 }
 
 .jours div {
-  padding: 10px;
-  background: #333;;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 14px;
+  padding: 10px; /* Espacement interne pour chaque jour */
+  background: #333; /* Fond sombre */
+  border-radius: 5px; /* Coins arrondis pour chaque jour */
+  text-align: center; /* Texte centré */
+  font-size: 14px; /* Taille du texte */
 }
 
+/* Style pour les en-têtes de la grille (les noms des jours) */
 .jours div.titre {
-  font-weight: bold;
-  background: #ddd;
-  color: #555;
+  font-weight: bold; /* Texte en gras */
+  background: #ddd; /* Fond clair pour les titres */
+  color: #555; /* Couleur de texte grise */
 }
 
-.jours div.actuel {
-  background: var(--bleu-electrique);
-  color: white;
-}
+
 
 /*------------------------*/
 /*--------Heure---------*/
@@ -312,17 +312,19 @@ nav ul {
 .heure {
   text-align: center;
 }
+
+/* Style pour la liste déroulante contenant l'heure */
 .heure dl {    
-  border-style: solid;
+  border-style: solid; /* Bordure solide autour de la liste */
   padding: 10px;
-  width:  300px;
-  margin: auto;
+  width: 400px; 
+  margin: auto; 
   height: 100px;
-  overflow: scroll;
-  scrollbar-width: none;
-  border-radius: 10px;
+  overflow: scroll; /* Permet le défilement si le contenu dépasse */
+  scrollbar-width: none; /* Cache la barre de défilement */
+  border-radius: 10px; /* Coins arrondis */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #333;
+  background-color: #333; 
   color: white;
 }
 
@@ -450,6 +452,7 @@ footer ul{
     grid-template-columns: 1fr;
     margin: 10px;
     padding: 10px;
+  
   }
   nav img {
     display: none;
@@ -465,7 +468,6 @@ footer ul{
   .image-gauche, .image-droite {
     display: none;
   }
-
 
   .Reservation {
     width: 90%;
@@ -508,19 +510,16 @@ footer ul{
     display: block; 
     width: 10%;  
     margin: 0 auto; 
+    justify-content: center; /* Centre les éléments horizontalement dans leur conteneur */
   }
 
-  .calendrier{
-    display: none;
-  }
-
-  .box {
-    display: none; /* Masque le calendrier */
-  }
+  
 
   .calendrier-image {
-    display: block; /* Affiche l'image */
-    width: 90%; /* Ajuste la largeur */
-    margin: 0 auto; /* Centre l'image */
+    display: inline-block; /* Affiche l'image */
+    width: auto; /* Ajuste la largeur de l'image (ajuster selon ton besoin) */
+    margin: 0 auto; /* Centre l'image horizontalement */
+    text-align: center; /* Centre l'image dans son conteneur */
   }
 }
+
