@@ -295,3 +295,8 @@ footer ul{
   width: 30px;
   height: 30px;
 }
+
+.contact-link {
+  color: #ccc;
+  text-decoration: none;
+}
