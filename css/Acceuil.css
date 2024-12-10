@@ -1,3 +1,40 @@
+/* Couleur curseur */
+body {
+    cursor: none; /* cache le curseur */
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgb(0, 132, 255), rgb(255, 0, 204));
+    pointer-events: none;
+    transition: transform 0.1s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    z-index: 9999;
+}
+
+body:hover::after {
+    transform: translate(calc(var(--mouse-x) - 10px), calc(var(--mouse-y) - 10px));
+}
+
+body {
+    --mouse-x: 0;
+    --mouse-y: 0;
+}
+
+body:hover {
+    --mouse-x: calc(var(--mouse-x) + 0);
+    --mouse-y: calc(var(--mouse-y) + 0);
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: var(--rose-fuchsia);
+}
+
 /*------------------------*/
 /*--------COULEUR--------*/
 /*------------------------*/
@@ -5,7 +42,7 @@
 :root {
     --bleu-electrique: rgb(0, 132, 255); /* Couleur bleu électrique */
     --rose-fuchsia: rgb(255, 0, 204);  /* Couleur rose fuchsia */
-  }
+}
 
 /* Animation dynamique */
 @keyframes glow {
@@ -25,112 +62,109 @@
         0 0 60px rgba(0, 255, 0, 0.1);
     }
 }
-  
+
 /*------------------------*/
 /*----------BODY----------*/
 /*------------------------*/
 
 body {
     margin: 0;
-    height: auto; 
+    height: auto;
     background: linear-gradient(25deg, rgb(20, 20, 20), rgba(73, 69, 69, 0.886));
-    color: white; /* Texte blanc par défaut */
+    color: white;
     font-family: 'Orbitron', sans-serif;
-  }
+}
+
+/* Image container */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
 
 .image img {
-    width: 25%;
+    width: 200px;
     height: auto;
     border-radius: 5px;
-    margin-bottom: 10px;
     background-color: rgba(0, 0, 0, 0.8);
     border: 2px solid var(--bleu-electrique);
     padding: 0;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.7);
+}
 
 /*------------------------*/
 /*---barre de navigation---*/
 /*------------------------*/
 
 header {
-    background-color: #333; 
+    background-color: #333;
     padding: 10px 0;
-  }
-  
+}
+
 nav ul {
     display: flex; /* Mise en ligne des éléments */
     justify-content: center; /* Centrage horizontal */
     align-items: center; /* Centrage vertical */
-    list-style: none; 
+    list-style: none;
     margin: 0;
     padding: 0;
-  }
-  
-  nav li {
-    margin: 0 15px; /* Espacement entre les items */
-  }
+}
 
-  nav a {
-    text-decoration: none; 
-    font-size: 20px; 
+nav li {
+    margin: 0 15px; /* Espacement */
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 20px;
     font-weight: bold;
-    color: var(--bleu-electrique); 
-    animation: NavColor 4s infinite alternate; 
-    text-shadow: 0 0 5px var(--bleu-electrique); 
-  }
-  
+    color: var(--bleu-electrique);
+    animation: NavColor 4s infinite alternate;
+    text-shadow: 0 0 5px var(--bleu-electrique);
+}
 
-  @keyframes NavColor {
+@keyframes NavColor {
     from {
-      color: var(--bleu-electrique); 
-      text-shadow: 0 0 10px var(--bleu-electrique), 0 0 20px var(--bleu-electrique);
+        color: var(--bleu-electrique);
+        text-shadow: 0 0 10px var(--bleu-electrique), 0 0 20px var(--bleu-electrique);
     }
     to {
-      color: var(--rose-fuchsia); 
-      text-shadow: 0 0 10px var(--rose-fuchsia), 0 0 20px var(--rose-fuchsia);
+        color: var(--rose-fuchsia);
+        text-shadow: 0 0 10px var(--rose-fuchsia), 0 0 20px var(--rose-fuchsia);
     }
-  }
-  
-  nav a:hover {
-    text-decoration: underline; 
-  }
-  
-  nav img {
-    height: 100px; 
-    vertical-align: middle; 
-  }
+}
 
-  section img{
-      height: 25%;
-      width: 25%;
-  }
+nav a:hover {
+    text-decoration: underline;
+}
 
+nav img {
+    height: 100px ;
+}
 
-  
-/*------------------------*/
-/*--------Footer--------*/
-/*------------------------*/
+section {
+    padding: 20px;
+    text-align: center;
+}
 
-footer dl {
-    margin: 0 auto;
-    padding: 0;
-    text-align: center; 
-  }
-  
-  footer dt {
-    font-weight: bold; 
-    text-transform: uppercase; 
-    margin-top: 15px;
-    font-size: 1.1em;
-    color: #0e9aff; 
-  }
-  
-  footer dd {
-    margin: 0 0 10px;
-    font-size: 0.9em;
-    color: #ccc; 
-  }
+h2 {
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
