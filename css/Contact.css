@@ -78,8 +78,25 @@ body {
   text-align: center;
 }
 
-h1{
-  color: #0e9aff;
+h1 {
+  color: #0e9aff; 
+  text-shadow: 
+  0 2px 4px rgba(0, 0, 0, 0.6), 
+  0 0 10px #0e9aff, 
+  0 0 20px rgba(255, 255, 255, 0.5);
+  animation: titleFadeIn 1s ease-in-out;
+  font-weight: 1000;
+}
+
+@keyframes titleFadeIn {
+from {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
 }
 
 /* Animation dynamique */
@@ -295,4 +312,9 @@ footer ul{
 .site img{
   width: 30px;
   height: 30px;
+}
+
+.contact-link {
+  color: #ccc;
+  text-decoration: none;
 }
