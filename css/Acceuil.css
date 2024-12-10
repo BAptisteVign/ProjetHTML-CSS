@@ -29,13 +29,13 @@
 /*------------------------*/
 /*----------BODY----------*/
 /*------------------------*/
-
 body {
     margin: 0;
     height: auto;
     background: linear-gradient(25deg, rgb(20, 20, 20), rgba(73, 69, 69, 0.886));
     color: white;
     font-family: 'Orbitron', sans-serif;
+    cursor: default; /* Définit le curseur par défaut */
 }
 
 /* Image container */
