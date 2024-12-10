@@ -30,6 +30,20 @@
 /*----------BODY----------*/
 /*------------------------*/
 
+.image img {
+    width: 250px; /* Largeur des images */
+    height: auto; /* Hauteur automatique pour garder les proportions */
+    border-radius: 5px; /* Coins arrondis */
+    background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond */
+    border: 2px solid var(--bleu-electrique); /* Bordure */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Ombre */
+}
+
+.image {
+    float: left; /* Fait flotter les images à gauche */
+    margin: 0 10px; /* Espace horizontal entre les images */
+}
+
 body {
     margin: 0;
     height: auto;
@@ -37,20 +51,6 @@ body {
     color: white; /* Texte blanc par défaut */
     font-family: 'Orbitron', sans-serif;
 }
-
-.image img {
-    width: 25%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
-    border: 2px solid var(--bleu-electrique);
-    padding: 0;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
 
 /*------------------------*/
 /*---barre de navigation---*/
@@ -133,4 +133,22 @@ footer dd {
     margin: 0 0 10px;
     font-size: 0.9em;
     color: #ccc;
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.site img{
+    width: 30px;
+    height: 30px;
+}
+
+.contact-link {
+    color: #ccc;
+    text-decoration: none;
 }
