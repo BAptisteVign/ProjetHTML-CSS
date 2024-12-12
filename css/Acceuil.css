@@ -3,27 +3,27 @@
 /*------------------------*/
 
 :root {
-    --bleu-electrique: rgb(0, 132, 255); /* Couleur bleu électrique */
-    --rose-fuchsia: rgb(255, 0, 204);  /* Couleur rose fuchsia */
+--bleu-electrique: rgb(0, 132, 255); /* Couleur bleu électrique */
+--rose-fuchsia: rgb(255, 0, 204);  /* Couleur rose fuchsia */
 }
 
 /* Animation dynamique */
 @keyframes glow {
-    0% {
-        box-shadow: 0 0 20px rgba(0, 255, 0, 0.5),
-        0 0 40px rgba(0, 255, 0, 0.3),
-        0 0 60px rgba(0, 255, 0, 0.1);
-    }
-    50% {
-        box-shadow: 0 0 30px rgba(0, 255, 0, 0.7),
-        0 0 50px rgba(0, 255, 0, 0.5),
-        0 0 70px rgba(0, 255, 0, 0.3);
-    }
-    100% {
-        box-shadow: 0 0 20px rgba(0, 255, 0, 0.5),
-        0 0 40px rgba(0, 255, 0, 0.3),
-        0 0 60px rgba(0, 255, 0, 0.1);
-    }
+0% {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5),
+    0 0 40px rgba(0, 255, 0, 0.3),
+    0 0 60px rgba(0, 255, 0, 0.1);
+}
+50% {
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.7),
+    0 0 50px rgba(0, 255, 0, 0.5),
+    0 0 70px rgba(0, 255, 0, 0.3);
+}
+100% {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5),
+    0 0 40px rgba(0, 255, 0, 0.3),
+    0 0 60px rgba(0, 255, 0, 0.1);
+}
 }
 
 /*------------------------*/
@@ -31,25 +31,25 @@
 /*------------------------*/
 
 .image img {
-    width: 250px; /* Largeur des images */
-    height: auto; /* Hauteur automatique pour garder les proportions */
-    border-radius: 5px; /* Coins arrondis */
-    background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond */
-    border: 2px solid var(--bleu-electrique); /* Bordure */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Ombre */
+width: 250px; /* Largeur des images */
+height: auto; /* Hauteur automatique pour garder les proportions */
+border-radius: 5px; /* Coins arrondis */
+background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond */
+border: 2px solid var(--bleu-electrique); /* Bordure */
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Ombre */
 }
 
 .image {
-    float: left; /* Fait flotter les images à gauche */
-    margin: 0 10px; /* Espace horizontal entre les images */
+float: left; /* Fait flotter les images à gauche */
+margin: 0 10px; /* Espace horizontal entre les images */
 }
 
 body {
-    margin: 0;
-    height: auto;
-    background: linear-gradient(25deg, rgb(20, 20, 20), rgba(73, 69, 69, 0.886));
-    color: white; /* Texte blanc par défaut */
-    font-family: 'Orbitron', sans-serif;
+margin: 0;
+height: auto;
+background: linear-gradient(25deg, rgb(20, 20, 20), rgba(73, 69, 69, 0.886));
+color: white; /* Texte blanc par défaut */
+font-family: 'Orbitron', sans-serif;
 }
 
 /*------------------------*/
@@ -57,56 +57,56 @@ body {
 /*------------------------*/
 
 header {
-    background-color: #333;
-    padding: 10px 0;
+background-color: #333;
+padding: 10px 0;
 }
 
 nav ul {
-    display: flex; /* Mise en ligne des éléments */
-    justify-content: center; /* Centrage horizontal */
-    align-items: center; /* Centrage vertical */
-    list-style: none;
-    margin: 0;
-    padding: 0;
+display: flex; /* Mise en ligne des éléments */
+justify-content: center; /* Centrage horizontal */
+align-items: center; /* Centrage vertical */
+list-style: none;
+margin: 0;
+padding: 0;
 }
 
 nav li {
-    margin: 0 15px; /* Espacement entre les items */
+margin: 0 15px; /* Espacement entre les items */
 }
 
 nav a {
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--bleu-electrique);
-    animation: NavColor 4s infinite alternate;
-    text-shadow: 0 0 5px var(--bleu-electrique);
+text-decoration: none;
+font-size: 20px;
+font-weight: bold;
+color: var(--bleu-electrique);
+animation: NavColor 4s infinite alternate;
+text-shadow: 0 0 5px var(--bleu-electrique);
 }
 
 
 @keyframes NavColor {
-    from {
-        color: var(--bleu-electrique);
-        text-shadow: 0 0 10px var(--bleu-electrique), 0 0 20px var(--bleu-electrique);
-    }
-    to {
-        color: var(--rose-fuchsia);
-        text-shadow: 0 0 10px var(--rose-fuchsia), 0 0 20px var(--rose-fuchsia);
-    }
+from {
+    color: var(--bleu-electrique);
+    text-shadow: 0 0 10px var(--bleu-electrique), 0 0 20px var(--bleu-electrique);
+}
+to {
+    color: var(--rose-fuchsia);
+    text-shadow: 0 0 10px var(--rose-fuchsia), 0 0 20px var(--rose-fuchsia);
+}
 }
 
 nav a:hover {
-    text-decoration: underline;
+text-decoration: underline;
 }
 
 nav img {
-    height: 100px;
-    vertical-align: middle;
+height: 100px;
+vertical-align: middle;
 }
 
 section img{
-    height: 25%;
-    width: 25%;
+height: 25%;
+width: 25%;
 }
 
 
@@ -116,39 +116,39 @@ section img{
 /*------------------------*/
 
 footer dl {
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
+margin: 0 auto;
+padding: 0;
+text-align: center;
 }
 
 footer dt {
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-top: 15px;
-    font-size: 1.1em;
-    color: #0e9aff;
+font-weight: bold;
+text-transform: uppercase;
+margin-top: 15px;
+font-size: 1.1em;
+color: #0e9aff;
 }
 
 footer dd {
-    margin: 0 0 10px;
-    font-size: 0.9em;
-    color: #ccc;
+margin: 0 0 10px;
+font-size: 0.9em;
+color: #ccc;
 }
 
 footer ul{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-evenly;
+list-style: none;
+display: flex;
+flex-direction: row;
+align-content: center;
+justify-content: space-evenly;
 }
 
 .site img{
-    width: 30px;
-    height: 30px;
+width: 30px;
+height: 30px;
 }
 
 .contact-link {
-    color: #ccc;
-    text-decoration: none;
+color: #ccc;
+text-decoration: none;
 }
