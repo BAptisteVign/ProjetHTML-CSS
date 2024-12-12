@@ -523,3 +523,13 @@ footer ul{
   }
 }
 
+
+
+#lien1 a{
+  color: white;
+}
+
+#lien2 a {
+  color: #ccc;
+  text-decoration: none;
+}
