@@ -37,6 +37,10 @@
     background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond */
     border: 2px solid var(--bleu-electrique); /* Bordure */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Ombre */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5),
+    0 0 40px rgba(0, 255, 0, 0.3),
+    0 0 60px rgba(0, 255, 0, 0.1);
+    animation: glow 2s infinite alternate-reverse;
 }
 
 .image {
@@ -74,7 +78,7 @@ nav li {
     margin: 0 15px; /* Espacement entre les items */
 }
 
-nav a {
+a {
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
