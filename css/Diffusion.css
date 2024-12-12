@@ -19,88 +19,56 @@ body {
 }
 
 /*------------------------*/
-/*------- NAV BAR ------- */
+/*---barre de navigation---*/
 /*------------------------*/
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-ul {
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-ul li {
-  list-style: none;
-  margin: 0 10px;
-}
-
-
-ul li:last-child {
-  margin-left: auto;  
-}
 
 header {
-  background-color: #333;
+  background-color: #333; 
   padding: 10px 0;
-  position: fixed; /* Barre de navigation fixée en haut */
-  top: 0;
-  width: 100%;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto; 
-  box-sizing: border-box; 
 }
 
+
 nav ul {
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  list-style: none;
+  display: flex; /* Mise en ligne des éléments */
+  justify-content: center; /* Centrage horizontal */
+  align-items: center; /* Centrage vertical */
+  list-style: none; 
   margin: 0;
   padding: 0;
-  flex-wrap: wrap; 
-  width: 100%; /* S'adapte à la largeur de l'écran */
-  box-sizing: border-box; 
 }
 
 nav li {
-  margin: 0 15px; 
-  white-space: nowrap; 
+  margin: 0 15px; /* Espacement entre les items */
 }
 
 nav a {
-  text-decoration: none;
-  font-size: 18px; 
+  text-decoration: none; 
+  font-size: 20px; 
   font-weight: bold;
-  color: var(--bleu-electrique);
-  animation: NavColor 4s infinite alternate;
-  text-shadow: 0 0 5px var(--bleu-electrique);
+  color: var(--bleu-electrique); 
+  animation: NavColor 4s infinite alternate; 
+  text-shadow: 0 0 5px var(--bleu-electrique); 
 }
 
-nav img {
-  height: 50px; 
-  vertical-align: middle;
-}
 
 @keyframes NavColor {
   from {
-    color: var(--bleu-electrique);
+    color: var(--bleu-electrique); 
     text-shadow: 0 0 10px var(--bleu-electrique), 0 0 20px var(--bleu-electrique);
   }
   to {
-    color: var(--rose-fuchsia);
+    color: var(--rose-fuchsia); 
     text-shadow: 0 0 10px var(--rose-fuchsia), 0 0 20px var(--rose-fuchsia);
   }
 }
 
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: underline; 
+}
+
+nav img {
+  height: 100px; 
+  vertical-align: middle; 
 }
 
 /*------------------------*/
@@ -257,38 +225,50 @@ footer dd {
 /*--- Responsive Design ---*/
 /*------------------------*/
 
-@media (max-width: 768px) {
-  .main-title {
-    font-size: 2.5em;
-    padding: 0 10px;
-  }
-
-  header {
-    flex-wrap: wrap;
-    height: auto;
-  }
-
+@media (max-width: 1024px) {
+  /* NavBar Responsive */
   nav ul {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
   }
 
   nav li {
-    margin: 5px 0;
+    margin: 10px 5px;
   }
 
   nav img {
-    height: 40px;
+    height: 80px; /* Ajuste la taille du logo */
   }
 
   .hero {
-    padding-top: 100px;
-    height: auto;
+    padding-top: 100px; /* Réduit l'espace supérieur */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hero Section */
+  .hero {
+    height: auto; /* Permet à la section de s'adapter à son contenu */
+    padding-top: 100px; /* Ajuste le padding */
   }
 
+  .back-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Conserve l’échelle et recadre la vidéo */
+  }
+
+  .main-title {
+    font-size: 2.5em;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  /* Content Boxes */
   .content-boxes {
-    grid-template-columns: 1fr;
-    padding: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Évite d’écraser les boîtes */
+    grid-gap: 15px;
   }
 
   .box {
@@ -296,20 +276,18 @@ footer dd {
   }
 
   .box img {
-    max-height: 150px;
+    height: auto; /* Conserve les proportions */
+    max-height: 200px; /* Évite des images trop grandes */
   }
 
   .box p {
-    font-size: 0.85em;
+    font-size: 1em; /* Maintient une bonne lisibilité */
   }
 
+  /* Footer */
   footer {
-    padding: 15px;
+    padding: 10px;
     font-size: 0.85em;
-  }
-
-  footer dl {
-    padding: 0 10px;
   }
 
   #social img {
@@ -319,19 +297,37 @@ footer dd {
 }
 
 @media (max-width: 480px) {
+  /* Hero Section */
+  .hero {
+    padding-top: 80px;
+  }
+
   .main-title {
     font-size: 2em;
   }
 
-  nav ul {
-    padding-left: 10px;
-  }
-
+  /* Content Boxes */
   .content-boxes {
+    grid-template-columns: 1fr; /* Une seule colonne sur les très petits écrans */
     grid-gap: 10px;
   }
 
   .box img {
-    max-height: 120px;
+    max-height: 150px;
+  }
+
+  .box p {
+    font-size: 0.9em;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 10px;
+  }
+
+  #social img {
+    width: 20px;
+    height: 20px;
   }
 }

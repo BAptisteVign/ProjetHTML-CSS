@@ -122,26 +122,27 @@ nav img {
   box-shadow: 0 0 20px rgba(0, 255, 0, 0.5),
               0 0 40px rgba(0, 255, 0, 0.3),
               0 0 60px rgba(0, 255, 0, 0.1);
-  animation: glow 2s infinite; /* Animation pour effet lumineux */
+  animation: glow 2s infinite alternate; /* Animation pour effet lumineux */
 }
 
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 
-                0 0 40px rgba(0, 255, 0, 0.3), 
-                0 0 60px rgba(0, 255, 0, 0.1);
+  /* Animation dynamique */
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 20px #00253980, 
+                  0 0 40px rgba(0, 52, 124, 0.3), 
+                  0 0 60px rgba(30, 163, 246, 0.1);
+    }
+    50% {
+      box-shadow: 0 0 30px var(--bleu-electrique), 
+                  0 0 50px aliceblue, 
+                  0 0 70px purple ;
+    }
+    100% {
+      box-shadow: 0 0 20px rgba(76, 41, 182, 0.5), 
+                  0 0 40px rgba(185, 56, 235, 0.3), 
+                  0 0 60px rgba(81, 84, 255, 0.1);
+    }
   }
-  50% {
-    box-shadow: 0 0 30px rgba(0, 255, 0, 0.7), 
-                0 0 50px rgba(0, 255, 0, 0.5), 
-                0 0 70px rgba(0, 255, 0, 0.3);
-  }
-  100% {
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 
-                0 0 40px rgba(0, 255, 0, 0.3), 
-                0 0 60px rgba(0, 255, 0, 0.1);
-  }
-}
 
 .section {
   grid-column: 2; 
@@ -523,3 +524,13 @@ footer ul{
   }
 }
 
+
+
+#lien1 a{
+  color: white;
+}
+
+#lien2 a {
+  color: #ccc;
+  text-decoration: none;
+}
