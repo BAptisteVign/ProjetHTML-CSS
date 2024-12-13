@@ -148,6 +148,14 @@ footer dl {
   text-align: center; 
 }
 
+a:link {
+  color: var(--bleu-electrique);
+}
+
+a:visited {
+  color: var(--bleu-electrique); /* Conserve la couleur bleue des liens non visités */
+}
+
 footer dt {
   font-weight: bold; 
   text-transform: uppercase; 
