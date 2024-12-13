@@ -450,6 +450,20 @@ footer ul{
   height: 30px;
 }
 
+.contact-link {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.site img {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+  transition: transform 0.3s;
+  padding-right: 50px ;
+}
+
+.site img:hover {
+  transform: scale(1.2);
+}
 /*------------------------*/
 /*--------Responsive--------*/
 /*------------------------*/
@@ -486,10 +500,7 @@ footer ul{
     width: 90%;
   }
 
-  footer ul {
-    flex-direction: column;
-  }
-
+  
   .heure dl {
     width: 90%;
   }
@@ -535,7 +546,6 @@ footer ul{
     text-align: center; /* Centre l'image dans son conteneur */
   }
 }
-
 
 
 #lien1 a{

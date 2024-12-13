@@ -342,3 +342,13 @@ footer ul{
   color: #ccc;
   text-decoration: none;
 }
+
+.site img {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+  transition: transform 0.3s;
+  padding-right: 50px ;
+}
+
+.site img:hover {
+  transform: scale(1.2);
+}
