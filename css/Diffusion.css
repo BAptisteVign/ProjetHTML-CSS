@@ -235,14 +235,18 @@ footer dd {
 
 @media (max-width: 1024px) {
   /* NavBar Responsive */
+  nav img {
+    display: none;
+  }
   nav ul {
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 10px;
+    flex-direction: column;
   }
 
-  nav li {
-    margin: 10px 5px;
+  .gauche1 {
+    padding: 0%;
+  }
+  .droite3{
+    padding: 0% ;
   }
 
   nav img {
@@ -255,6 +259,20 @@ footer dd {
 }
 
 @media (max-width: 768px) {
+  nav img {
+    display: none;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+
+  .gauche1 {
+    padding: 0%;
+  }
+  .droite3{
+    padding: 0% ;
+  }
+  
   /* Hero Section */
   .hero {
     height: auto; /* Permet à la section de s'adapter à son contenu */
@@ -305,6 +323,20 @@ footer dd {
 }
 
 @media (max-width: 480px) {
+  nav img {
+    display: none;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+
+  .gauche1 {
+    padding: 0%;
+  }
+  .droite3{
+    padding: 0% ;
+  }
+  
   /* Hero Section */
   .hero {
     padding-top: 80px;

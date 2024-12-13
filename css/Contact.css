@@ -260,6 +260,21 @@ input {
 
 /* Styles spécifiques pour les écrans de taille moyenne (tablettes) */ 
 @media (min-width: 601px) and (max-width: 1024px) { 
+  
+  nav img {
+    display: none;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+
+  .gauche1 {
+    padding: 0%;
+  }
+  .droite3{
+    padding: 0% ;
+  }
+  
   form { 
     padding: 20px; 
   } 

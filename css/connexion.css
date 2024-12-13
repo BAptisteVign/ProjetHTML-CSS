@@ -266,6 +266,7 @@ footer dl {
   label { 
     font-size: 14px; 
   }
+ 
   nav img {
     display: none;
   }
@@ -273,6 +274,12 @@ footer dl {
     flex-direction: column;
   }
 
+  .gauche1 {
+    padding: 0%;
+  }
+  .droite3{
+    padding: 0% ;
+  }
 }
 
 /* Styles spécifiques pour les écrans de taille moyenne (tablettes) */ 
@@ -281,6 +288,20 @@ footer dl {
     padding: 20px; 
   } 
   
+  nav img {
+    display: none;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+
+  .gauche1 {
+    padding: 0%;
+  }
+  .droite3{
+    padding: 0% ;
+  }
+
   input { 
     font-size: 16px; 
     padding: 12px; 
