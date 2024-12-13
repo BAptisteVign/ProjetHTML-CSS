@@ -67,7 +67,12 @@ nav ul {
 nav li {
   margin: 0 15px; /* Espacement entre les items */
 }
-
+.gauche1{
+  padding-left: 220px;
+}
+.droite3{
+  padding-right: 100px;
+}
 /* Style pour les liens dans la barre de navigation */
 nav a {
   text-decoration: none; /* Supprime le soulignement par défaut */
@@ -96,6 +101,7 @@ nav a:hover {
 }
   
 nav img {
+ 
   height: 7rem; 
   vertical-align: middle; 
 }
@@ -462,6 +468,12 @@ footer ul{
     flex-direction: column;
   }
 
+  .gauche1 {
+    padding: 0%;
+  }
+  .droite3{
+    padding: 0% ;
+  }
   .button {
     flex-direction: column;
   }

@@ -23,33 +23,39 @@ body {
 /*------------------------*/
 
 header {
-  background-color: #333; 
+  background-color: #333;   /* Couleur de fond sombre pour contraster avec le texte et le reste du site*/
   padding: 10px 0;
 }
 
-
+/* Style pour la liste de navigation */
 nav ul {
   display: flex; /* Mise en ligne des éléments */
   justify-content: center; /* Centrage horizontal */
-  align-items: center; /* Centrage vertical */
-  list-style: none; 
+  align-items: center; 
+  list-style: none; /* Supprime les puces des listes */ 
   margin: 0;
   padding: 0;
 }
 
+/* Style pour chaque élément de la liste */
 nav li {
-  margin: 0 15px; /* Espacement entre les items */
+margin: 0 15px; /* Espacement entre les items */
 }
-
+.gauche1{
+padding-left: 220px;
+}
+.droite3{
+padding-right: 100px;
+}
+/* Style pour les liens dans la barre de navigation */
 nav a {
-  text-decoration: none; 
-  font-size: 20px; 
-  font-weight: bold;
-  color: var(--bleu-electrique); 
-  animation: NavColor 4s infinite alternate; 
-  text-shadow: 0 0 5px var(--bleu-electrique); 
+text-decoration: none; /* Supprime le soulignement par défaut */
+font-size: 20px; 
+font-weight: bold; 
+color: var(--bleu-electrique); 
+animation: NavColor 4s infinite alternate; /* Animation pour changer les couleurs */
+text-shadow: 0 0 5px var(--bleu-electrique); /* Effet lumineux autour du texte */
 }
-
 
 @keyframes NavColor {
   from {
@@ -62,15 +68,17 @@ nav a {
   }
 }
 
+/* Effet au survol des liens */
 nav a:hover {
-  text-decoration: underline; 
+text-decoration: underline; 
+
 }
 
 nav img {
-  height: 100px; 
-  vertical-align: middle; 
-}
 
+height: 7rem; 
+vertical-align: middle; 
+}
 /*------------------------*/
 /*--- Section vidéo (hero) */
 /*------------------------*/
@@ -227,14 +235,18 @@ footer dd {
 
 @media (max-width: 1024px) {
   /* NavBar Responsive */
+  nav img {
+    display: none;
+  }
   nav ul {
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 10px;
+    flex-direction: column;
   }
 
-  nav li {
-    margin: 10px 5px;
+  .gauche1 {
+    padding: 0%;
+  }
+  .droite3{
+    padding: 0% ;
   }
 
   nav img {
@@ -247,6 +259,20 @@ footer dd {
 }
 
 @media (max-width: 768px) {
+  nav img {
+    display: none;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+
+  .gauche1 {
+    padding: 0%;
+  }
+  .droite3{
+    padding: 0% ;
+  }
+  
   /* Hero Section */
   .hero {
     height: auto; /* Permet à la section de s'adapter à son contenu */
@@ -297,6 +323,20 @@ footer dd {
 }
 
 @media (max-width: 480px) {
+  nav img {
+    display: none;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+
+  .gauche1 {
+    padding: 0%;
+  }
+  .droite3{
+    padding: 0% ;
+  }
+  
   /* Hero Section */
   .hero {
     padding-top: 80px;

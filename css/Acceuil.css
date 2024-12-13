@@ -58,48 +58,62 @@ section {
 }
 
 header {
-    background-color: #333;
+    background-color: #333;   /* Couleur de fond sombre pour contraster avec le texte et le reste du site*/
     padding: 10px 0;
-}
+  }
 
+/* Style pour la liste de navigation */
 nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
+    display: flex; /* Mise en ligne des éléments */
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; 
+    list-style: none; /* Supprime les puces des listes */ 
     margin: 0;
     padding: 0;
-}
-
+  }
+  
+/* Style pour chaque élément de la liste */
 nav li {
-    margin: 0 15px;
+  margin: 0 15px; /* Espacement entre les items */
+}
+.gauche1{
+  padding-left: 220px;
+}
+.droite3{
+  padding-right: 100px;
+}
+/* Style pour les liens dans la barre de navigation */
+nav a {
+  text-decoration: none; /* Supprime le soulignement par défaut */
+  font-size: 20px; 
+  font-weight: bold; 
+  color: var(--bleu-electrique); 
+  animation: NavColor 4s infinite alternate; /* Animation pour changer les couleurs */
+  text-shadow: 0 0 5px var(--bleu-electrique); /* Effet lumineux autour du texte */
 }
 
-a {
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--bleu-electrique);
-    animation: NavColor 4s infinite alternate;
-    text-shadow: 0 0 5px var(--bleu-electrique);
-}
-
-nav img {
-    height: 100px;
-    vertical-align: middle;
-}
-
-@keyframes NavColor {
+  @keyframes NavColor {
     from {
-        color: var(--bleu-electrique);
-        text-shadow: 0 0 10px var(--bleu-electrique), 0 0 20px var(--bleu-electrique);
+      color: var(--bleu-electrique); 
+      text-shadow: 0 0 10px var(--bleu-electrique), 0 0 20px var(--bleu-electrique);
     }
     to {
-        color: var(--rose-fuchsia);
-        text-shadow: 0 0 10px var(--rose-fuchsia), 0 0 20px var(--rose-fuchsia);
+      color: var(--rose-fuchsia); 
+      text-shadow: 0 0 10px var(--rose-fuchsia), 0 0 20px var(--rose-fuchsia);
     }
-}
+  }
 
+/* Effet au survol des liens */
+nav a:hover {
+  text-decoration: underline; 
+
+}
+  
+nav img {
+ 
+  height: 7rem; 
+  vertical-align: middle; 
+}
 footer {
     padding: 20px;
     text-align: center;
