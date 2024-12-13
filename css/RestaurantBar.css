@@ -91,7 +91,7 @@ section img{
 .titre-section h2 {
   text-transform: capitalize;
   font-size: 28px;
-  color: var(--rose-fuchsia); 
+  color: var(--bleu-electrique); 
   text-align: center;
   margin-bottom: 10px;
 }
@@ -183,46 +183,72 @@ section img{
 }
 
 /*------------------------*/
-/*--------Footer--------*/
+/*-------- Footer --------*/
 /*------------------------*/
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #222;
+  color: white;
+}
 
 footer dl {
   margin: 0 auto;
   padding: 0;
-  text-align: center; 
 }
 
 footer dt {
-  font-weight: bold; 
-  text-transform: uppercase; 
+  font-weight: bold;
+  text-transform: uppercase;
   margin-top: 15px;
   font-size: 1.1em;
-  color: #0e9aff; 
+  color: #0e9aff;
 }
 
 footer dd {
   margin: 0 0 10px;
   font-size: 0.9em;
-  color: #ccc; 
+  color: #ccc;
 }
 
-footer ul{
-  list-style: none;
+#social {
   display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 0;
 }
 
-.site img{
+#social li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+#social img {
   width: 30px;
   height: 30px;
 }
 
-.contact-link {
-  color: #ccc;
-  text-decoration: none;
+h2 {
+  color: #0e9aff; 
+  text-shadow: 
+  0 2px 4px rgba(0, 0, 0, 0.6), 
+  0 0 10px #0e9aff, 
+  0 0 20px rgba(255, 255, 255, 0.5);
+  animation: titleFadeIn 1s ease-in-out;
+  font-weight: 1000;
 }
+
+@keyframes titleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  }
 
 /* Styles spécifiques pour les petits écrans (téléphones) */ 
 @media (max-width: 600px) { 
