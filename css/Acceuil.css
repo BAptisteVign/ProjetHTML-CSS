@@ -1,64 +1,66 @@
-/*------------------------*/
-/*--------COULEUR--------*/
-/*------------------------*/
-
 :root {
-    --bleu-electrique: rgb(0, 132, 255); /* Couleur bleu électrique */
-    --rose-fuchsia: rgb(255, 0, 204);  /* Couleur rose fuchsia */
-}
-
-/* Animation dynamique */
-@keyframes glow {
-    0% {
-        box-shadow: 0 0 20px rgba(0, 255, 0, 0.5),
-        0 0 40px rgba(0, 255, 0, 0.3),
-        0 0 60px rgba(0, 255, 0, 0.1);
-    }
-    50% {
-        box-shadow: 0 0 30px rgba(0, 255, 0, 0.7),
-        0 0 50px rgba(0, 255, 0, 0.5),
-        0 0 70px rgba(0, 255, 0, 0.3);
-    }
-    100% {
-        box-shadow: 0 0 20px rgba(0, 255, 0, 0.5),
-        0 0 40px rgba(0, 255, 0, 0.3),
-        0 0 60px rgba(0, 255, 0, 0.1);
-    }
-}
-
-/*------------------------*/
-/*----------BODY----------*/
-/*------------------------*/
-
-.image img {
-    width: 250px; /* Largeur des images */
-    height: auto; /* Hauteur automatique pour garder les proportions */
-    border-radius: 5px; /* Coins arrondis */
-    background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond */
-    border: 2px solid var(--bleu-electrique); /* Bordure */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Ombre */
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5),
-    0 0 40px rgba(0, 255, 0, 0.3),
-    0 0 60px rgba(0, 255, 0, 0.1);
-    animation: glow 2s infinite alternate-reverse;
-}
-
-.image {
-    float: left; /* Fait flotter les images à gauche */
-    margin: 0 10px; /* Espace horizontal entre les images */
+    --bleu-electrique: rgb(0, 132, 255);
+    --rose-fuchsia: rgb(255, 0, 204);
 }
 
 body {
     margin: 0;
     height: auto;
     background: linear-gradient(25deg, rgb(20, 20, 20), rgba(73, 69, 69, 0.886));
-    color: white; /* Texte blanc par défaut */
+    color: white;
     font-family: 'Orbitron', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
-/*------------------------*/
-/*---barre de navigation---*/
-/*------------------------*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.left-section {
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-section {
+    flex: 1 1 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(50, 50, 50, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+section {
+    background-color: rgba(40, 40, 40, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+section img {
+    height: 25%;
+    width: 25%;
+}
+
+.image img {
+    width: 250px;
+    height: auto;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid var(--bleu-electrique);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5),
+    0 0 40px rgba(0, 255, 0, 0.3),
+    0 0 60px rgba(0, 255, 0, 0.1);
+    animation: glow 2s infinite alternate-reverse;
+}
 
 header {
     background-color: #333;
@@ -66,16 +68,16 @@ header {
 }
 
 nav ul {
-    display: flex; /* Mise en ligne des éléments */
-    justify-content: center; /* Centrage horizontal */
-    align-items: center; /* Centrage vertical */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 nav li {
-    margin: 0 15px; /* Espacement entre les items */
+    margin: 0 15px;
 }
 
 a {
@@ -87,6 +89,10 @@ a {
     text-shadow: 0 0 5px var(--bleu-electrique);
 }
 
+nav img {
+    height: 100px;
+    vertical-align: middle;
+}
 
 @keyframes NavColor {
     from {
@@ -99,65 +105,45 @@ a {
     }
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-nav img {
-    height: 100px;
-    vertical-align: middle;
-}
-
-section img{
-    height: 25%;
-    width: 25%;
-}
-
-
-
-/*------------------------*/
-/*-------- Footer --------*/
-/*------------------------*/
-
 footer {
     padding: 20px;
     text-align: center;
     background-color: #222;
     color: white;
-  }
-  
-  footer dl {
+}
+
+footer dl {
     margin: 0 auto;
     padding: 0;
-  }
-  
-  footer dt {
+}
+
+footer dt {
     font-weight: bold;
     text-transform: uppercase;
     margin-top: 15px;
     font-size: 1.1em;
     color: #0e9aff;
-  }
-  
-  footer dd {
+}
+
+footer dd {
     margin: 0 0 10px;
     font-size: 0.9em;
     color: #ccc;
-  }
-  
-  #social {
+}
+
+#social {
     display: flex;
     justify-content: center;
     margin: 20px 0;
     padding: 0;
-  }
-  
-  #social li {
+}
+
+#social li {
     list-style: none;
     margin: 0 10px;
-  }
-  
-  #social img {
+}
+
+#social img {
     width: 30px;
     height: 30px;
-  }
+}
