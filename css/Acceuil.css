@@ -1,7 +1,15 @@
+/*------------------------*/
+/*--------COULEUR--------*/
+/*------------------------*/
+
 :root {
     --bleu-electrique: rgb(0, 132, 255);
     --rose-fuchsia: rgb(255, 0, 204);
 }
+
+/*------------------------*/
+/*----------BODY----------*/
+/*------------------------*/
 
 body {
     margin: 0;
@@ -39,11 +47,12 @@ body {
 }
 
 section {
-    background-color: rgba(40, 40, 40, 0.9);
+    background-color: rgba(50, 50, 50, 0.8);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
+
 
 .image img {
     width: 250px;
@@ -56,6 +65,21 @@ section {
     0 0 60px rgba(0, 255, 0, 0.1);
     animation: glow 2s infinite alternate-reverse;
 }
+#Kameto {
+  display: flex; /* Active le mode flexbox */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement (si nécessaire) */
+  height: 100%; /* Assure une hauteur adaptée pour le centrage vertical */
+}
+
+#Kameto img {
+  max-width: 100%; /* L'image ne débordera pas du conteneur */
+  height: auto; /* Garde les proportions de l'image */
+}
+
+/*------------------------*/
+/*---barre de navigation---*/
+/*------------------------*/
 
 header {
     background-color: #333;   /* Couleur de fond sombre pour contraster avec le texte et le reste du site*/
@@ -114,8 +138,10 @@ nav img {
   height: 7rem; 
   vertical-align: middle; 
 }
-/*-----FOOTER-----*/
 
+/*------------------------*/
+/*--------FOOTER--------*/
+/*------------------------*/
 footer dl {
   margin: 0 auto;
   padding: 0;
@@ -162,4 +188,31 @@ footer ul{
 
 .site img:hover {
   transform: scale(1.2);
+}
+
+
+/*------------------------*/
+/*-------Responsive--------*/
+/*------------------------*/
+
+@media (max-width: 768px) {
+  .main-container {
+    grid-template-columns: 1fr;
+    margin: 10px;
+    padding: 10px;
+  
+  }
+  nav img {
+    display: none;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+
+  .gauche1 {
+    padding: 0%;
+  }
+  .droite3{
+    padding: 0% ;
+  }
 }

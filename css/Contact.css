@@ -256,6 +256,14 @@ input {
     flex-direction: column;
   }
 
+  
+  .gauche1 {
+    padding: 0%;
+  }
+  .droite3{
+    padding: 0% ;
+  }
+
 }
 
 /* Styles spécifiques pour les écrans de taille moyenne (tablettes) */ 
