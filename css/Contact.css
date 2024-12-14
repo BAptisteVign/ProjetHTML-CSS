@@ -232,6 +232,11 @@ input {
   cursor: pointer;
 }
 
+
+/*------------------------*/
+/*--------RESPONSIVE--------*/
+/*------------------------*/
+
 /* Styles spécifiques pour les petits écrans (téléphones) */ 
 @media (max-width: 600px) { 
   form { 
